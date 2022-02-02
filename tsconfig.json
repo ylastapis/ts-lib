@@ -1,0 +1,62 @@
+{
+  "compilerOptions": {
+    "allowSyntheticDefaultImports": true,
+    "declaration": true,
+    "esModuleInterop": true,
+    "importHelpers": true,
+    "jsx": "react",
+    "lib": [
+      "es5",
+      "es6",
+      "es7",
+      "es2018",
+      "es2017",
+      "dom",
+      "dom.iterable",
+      "es2015",
+      "esnext"
+    ],
+    "types": [
+      "node"
+    ],
+    "module": "ES2015",
+    "moduleResolution": "node",
+    "noImplicitAny": true,
+    "noUnusedLocals": true,
+    "outDir": "dist/esm",
+    "sourceMap": true,
+    "strict": true,
+    "target": "es6",
+
+
+//    "noErrorTruncation": true,
+//    "noImplicitReturns": true,
+//    "noImplicitThis": true,
+//    "pretty": true,
+//    "resolveJsonModule": true,
+//    "skipDefaultLibCheck": true,
+//    "skipLibCheck": true,
+//    "strictNullChecks": true,
+//    "suppressImplicitAnyIndexErrors": true,
+//    "paths": {
+//      "@mui/styled-engine": [
+//        "./node_modules/@mui/styled-engine-sc"
+//      ]
+//    }
+  },
+  "include": [
+    "src",
+    "custom.d.ts"
+  ],
+  "paths": {
+    "@mui/styled-engine": [
+      "./node_modules/@mui/styled-engine-sc"
+    ]
+  },
+  "exclude": [
+    "node_modules",
+    "dist",
+    "**/*.stories.*",
+    "src/stories"
+  ]
+}

@@ -1,0 +1,41 @@
+{
+  "description": "whatever",
+  "name": "ts-lib",
+  "version": "1.0.0",
+  "main": "dist/index.cjs.js",
+  "module": "dist/index.esm.js",
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "license": "MIT",
+  "devDependencies": {
+    "@emotion/react": "^11.7.1",
+    "@emotion/styled": "^11.6.0",
+    "@mui/material": "^5.4.0",
+    "@types/node": "^17.0.13",
+    "@types/react": "^17.0.38",
+    "@types/react-dom": "^17.0.11",
+    "copyfiles": "^2.4.1",
+    "esbuild": "^0.14.16",
+    "esbuild-plugin-svgr": "^1.0.0",
+    "prettier": "^2.5.1",
+    "react": "^16.8.0",
+    "react-dom": "^16.8.0",
+    "rimraf": "^3.0.2",
+    "tslib": "^2.3.1",
+    "typescript": "^4.5.5"
+  },
+  "peerDependencies": {
+    "react": "^16.8.0",
+    "react-dom": "^16.8.0",
+    "react-is": "^16.8.0"
+  },
+  "scripts": {
+    "build": "yarn prettify && yarn build:esbuild && yarn types",
+    "build:esbuild": "yarn clean && node build.js",
+    "types": "tsc --emitDeclarationOnly --outDir dist",
+    "clean": "rimraf dist",
+    "prettify": "prettier --write src"
+  }
+}
